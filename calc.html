@@ -1,0 +1,1856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Calculations</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+   <!--  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="index.html">Home</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="about.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#services">Practice Areas</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Articles</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Sliding Scales</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Our Practice Areas
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">Services</li>
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Image Header -->
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="img/intro-bga.jpg" alt="">
+            </div>
+        </div>
+        <!-- /.row -->
+
+		<!-- Jim trying to insert a javascript-controlled bunch of content -->
+		<div id = "cssmenu">
+		<ul>
+            <li><a id = "overview">Overview</a></li>
+            <li><a class = "active">Calculate</a>
+				<ul>
+				   <li><a id = "povcalc">Threshold Ratio</a></li>
+				   <li><a id = "sscalc">Fee</a>
+					<ul>
+						<li><a id = "sscinstructions">Instructions</a></li>
+						<li><a id = "sscfoptions">Calculator</a></li>
+						<li><a id = "sscequations">Equations</a></li>
+				</ul>
+			</li>
+					<li><a class = "has-sub" id = "revproj">Revenue</a>
+						<ul>
+						<li><a id = "revinstructions">Instructions</a></li>
+						<li><a id = "revclientdata">Client Data</a></li>
+						<li><a id = "revresults">Results</a></li>
+						<li><a id = "revequations">Equations</a></li>
+						 </ul>
+					</li>	 
+				</ul>
+			</li>
+            <li><a id = "print">Print</a></li>			
+            <li><a id = "explain">Explain</a></li>
+            <li><a id = "faqs">Ask</a></li>
+            <li><a id = "terms">Terms</a></li>
+            <li><a id = "more">More</a></li>            
+	 </ul>
+	 </div>
+
+		<div class = "pagehead" id = "poverview" hidden>
+            <h1>Overview</h1>
+             <div id = "ovaccordion">
+				<h2>What Is It?</h2>
+			   <p>This site offers tools to help for-profit law offices calculate and use hourly fees for clients based on sliding-scales. 
+			   Although the fees are computed on an hourly basis, it's easy to apply the results to flat-fee situations.</p>
+				<div>
+					<ul>
+						<li>The site currently offers tools to compute:
+							<ul>
+							<li>The client's <i>threshold ratio</i>&mdash;a benchmark of the client's economic status.</li>
+							<li>A sliding-scale fee, given the client's' threshold ratio.</li>
+							<li>Projected revenue, given a fee structure and assumptions about clientele.</li>
+							</ul>
+						</li>
+						<li>The tools reduce the confusion and hassle associated with computing sliding-scale fees. Benchmarking a client's economic status,
+						in particular, can be a pain in the neck without a tool that brings together sources of income, relevant thresholds, and
+						inflation adjustment.</li>
+						<li>The user must identify the assumptions necessary for a sound fee structure. This makes sliding-scale fees less susceptible 
+						to arbitrary decisions, self-serving manipulation, and logical inconsistency.</li>
+						<li>The user can <i>document, document, document</i> his or her fee structure and its application to a given
+						client. Added to the client's file, the attorney has a clear record of what they charged, how they came up with their numbers,
+						and both the underlying assumptions and client "inputs" the attorney used.</li>
+						<li>The user can forecast how fee structures impact revenue, given the clientele an office serves.</li>
+						<li>Statistics on poverty help the attorney put their fee structure in context.</li>  
+					</ul>
+					<p>The site has plenty of documentation that explains our approaches to this issue.</p>
+				</div>
+
+				<h2>How It Works</h2>
+				<div>
+					<ol>
+						<li>Select Calculate&rarr;Threshold Ratio. Choose a locale (or the U.S. as a whole), housing status, and
+						the number of children, adults, and older adults in the family. Enter wages and other income where indicated.
+						For most income, you can enter either annual amounts or monthly amounts, and the computer will adjust accordingly.
+						Several applicable thresholds and threshold ratios appear at the bottom of the page. These can be interpreted as
+						percents. For example, a ratio of 1.12 means that a client is 12% above his or her threshold. A ratio of 0.88 means that
+						the client is 88% of his or her threshold, or 12 percentage points below it.</li>
+						<li>Select Calculate&rarr;Fee&rarr;Calculator (after reading the instructions, of course). You will choose
+						a model for the fee structure. Then you will choose one of the threshold ratios calculated in Step 1. The computer
+						will apply the fee structure to that threshold ratio. You can examine a graph or a table of your sliding-scale fee.</li>
+						<li>That's pretty much it. You are encouraged to Print your results. Selecting Print will create a printer-friendly
+						document that you can print or save as a .pdf and add to the client's file.</li>
+						<li>If you want, you can get a rough sense of how your sliding-scale fee structure may impact revenue over time. Select
+						Calculate&rarr;Revenue&rarr;Instructions to get started.</li>
+					</ol>
+				</div>
+				<h2>Test Yourself</h2>
+				<p>If you're a new to sliding-scale fees or this site or both, then you might want to apply the calculators to the following
+				hypotheticals to check whether or not you're on the right track or are missing useful site functionality. These hypotheticals
+				raise some of the well-known difficulties in assessing client need.</p>
+				<div>
+					<ol>
+						<li>A family of four in Decatur, AL (one adult and three minor children) earns $10/hour working 35 hours/week.
+						The family rents its home. It receives $1,000 a month in child support and $8,000 a year in TANF. The attorney chooses
+						a "flexible" fee structure, rounded in units of $1.00. That fee structure has a minimum fee of $25 and a maximum of $320.
+						The attorney charges the maximum fee when a client's threshold ratio reaches 2 and the minimum when the client's threshold ratio 
+						reaches 0.4. Clients at the threshold receive a 40% discount (the fee is 60% of the maximum fee). The attorney chooses
+						shape parameters of 0. Using 100% of the supplemental poverty threshold as the benchmark of family need, what is the 
+						attorney's fee?
+						</li>
+						<li>A family in a small town in rural Idaho owns its home outright. The family is comprised of two adults, one
+						age 62 and one age 67. Spouse #1 earns $500 a month during six summer months doing odds and ends. Spouse #2 is self-
+						employed and grossly roughly $12,000 last year. They receive $600 a month in regular social security income (SSI) and
+						$8,000 a year in pension and IRA distributions. All of the family's income has been going to Spouse #1's health costs.
+						The attorney charges a minimum of $80 and a maximum of $280 and rounds fees to units of $10. Using an empirical sliding-scale fee (which is based on
+						the family's vulnerability to poverty) based only available income, and using 125% of the supplemental poverty threshold as a benchmark
+						of the family's need, what is the fee?
+						</li>
+						<li>A family of three lives in Portland, Oregon (which is in Multnomah County). The two young adults (29 and 27) have a new baby, 
+						are starting a business, paying student tuition, and struggling to pay their home mortgage. Their main income is Spouse #1's
+						salary, which is $4,000 a month (12 months a year). (The family is quick to point out that 20% of that went to payroll taxes.)
+						Spouse #2 is a student and stay-at-home parent. The family received $133 in federal tax credits last year and $500 in dividends. Spouse 2's
+						parents gave them a used car worth $6,000 and $5,000 gift certificate for baby supplies. Complications from the 
+						baby's delivery have resulted in hospital bills averaging $500 a month. Spouse #1 has been sued. The mandatory court filing fees
+						will total around $1,000, though the case will involve several thousand additional dollars worth of litigation expenses. The attorney
+						likes using <a href = "https://www.selfsufficiencystandard.org/">self-sufficiency standards</a> to benchmark family need,
+						since they can do a better job than official benchmarks of accounting for important costs and identifying a point above which
+						a family is ineligible for government benefits. The attorney charges a minimum of $75 an hour and a maximum of $450 an hour.
+						Using an empirical fee structure rounded to $5 increments and based on <b>all</b> sources of income, 
+						what is the attorney's fee?</li>
+
+						<li>A 40 year-old woman living in a domestic violence shelter earns $10 an hour working 30 hours a week. She lives in Marysville, WA,
+						a town of 65,000 people. Her ex-husband owes her $500 a month in spousal support, but she has never received any. She has
+						no assets or other income. She is facing $1,000 of mandatory filing costs in order to sue for a judgment on the spousal support.
+						The attorney charges a maximum of $250 an hour, but his overhead is very low and he could pay his essential firm expenses 
+						(though not any of his time) if clients paid $10 an hour. He feels most comfortable with a threshold based on 175% of a
+						client's official poverty guideline. His fees are rounded to the nearest $10. He offers his minimum fee to anyone 50% of that
+						threshold, but anyone 50% over the threshold must pay the maximum. Clients exactly at the threshold pay 40% of the maximum 
+						(a discount of 60%). Because he likes a smoother scale, he chooses a "shape" structure where the lower shape is set to "1"
+						and the upper shape is set to "2." What is the client's fee? Suppose instead that the minimum wage in Washington were raised to $15. 
+						What would the client's fee be?</li>
+					</ol>
+					<h3>Answers</h3>
+					<ol>
+						<li>The family's official poverty guideline is $24,249 (ratio of 0.75), official poverty threshold is $24,273 (ratio of 0.75)
+						, and supplemental threshold is $20,540 (ratio of 0.89). Using that ratio, the fee is $161.00.</li>
+						<li>The family's official poverty guideline is $15,930 (ratio of 1.90), official poverty threshold is $15,973 (ratio of 1.89)
+						, and supplemental threshold is $12,809 (ratio of 2.36). 125% of the supplemental threshold is 1.89. The fee is $260. 
+						(Note that the fact that income was spent on medical expenses does not figure into the calculations.)</li>
+						<li>The family's self-sufficiency standard is $57,644 in 2014 dollars, which is $57,152 in June 2015 dollars (yes, there has
+						been modest deflation since 2014; it will probably turn into inflation by the end of the year). The attorney excludes $1,000
+						of mandatory filing fees from the client's income. This yields income of $47,633 and a threshold
+						ratio of 0.83. It is interesting to compare that number is to the official statistics. The client's fee is
+						$275. (Using the official guideline, instead, which a government program might do, the fee would be $430.)</li>
+						<li>Applying the $1,000 discount on account of the mandatory filing fees, the client's threshold ratio is 0.71 and her
+						fee is $35. If the minimum wage were raised to $15/hr, the client's threshold ratio would be 1.99 and her fee would be $250/hr.</li>
+					</ol>
+				</div>
+				<h2>Terms of Service</h2>
+				<div>
+					<ul>
+						<li>All content provided to you on this site is provided subject to our Terms of Service (click on "Terms," above). By using this site or continuing
+						to use this site, you agree to them. We update those terms from time to time. Please read and understand them.</li>
+					</ul>
+				</div>
+
+            </div>
+         </div>		
+
+		<div class = "pagehead" id = "ppovcalc" hidden>
+		<form>
+				 <fieldset  class = "pcfieldset">
+					<legend>Family Characteristics</legend>
+					<div id = "statemenus">
+					   <select id = "stateincmenu"></select>
+					   <select id = "msaincmenu" hidden></select>
+					</div>
+
+					<table id = "fc">
+					<tr><td colspan = "3"></td></tr>
+					<tr>
+					<td><label for = "hm" >Homeowner (Mortgage)</label></td>
+					<td><label for = "hnm">Homeowner (No Mortgage)</label></td>
+					<td><label for = "renter">Renter</label></td>
+					</tr>
+					<tr>
+					<td><input name = "living" type = "radio" value = "1" id = "hm" checked></td>
+					<td><input name = "living" type = "radio" value = "2" id = "hnm" checked></td>
+					<td><input name = "living" type = "radio" value = "3" id = "renter" checked></td>
+					</tr>
+					<tr><td colspan = "3"></td></tr>
+					<tr><td><label for = "adults">Adults &lt; 65 </label></td>
+					    <td><label for = "elderly">Adults &ge; 65</label></td>
+					    <td><label for = "children">Children &lt; 18</label></td>
+					</tr>
+					<tr><td><input id = "adults" name = "adults" type = "number" value = "2"/></td>
+					   <td><input id = "elderly" name = "elderly" type = "number" value = "0"/></td>
+					   <td><input id = "children" name = "children" type = "number" value = "0"/></td>
+					</tr>
+					</table>
+				 </fieldset>
+
+				 <fieldset class = "pcfieldset">
+				 <legend>Wages &amp; Self-Employment Income</legend>
+				 <table id = "earningstable">
+					<tr>
+					   <th>Identifier 
+							<a href = "#" class = "tooltip infolink">
+								<span>
+									<img class = "callout" src = "callout.gif" />
+									For example, "Spouse #1," "Grandparent #1," "Adult daughter #2."
+								</span>
+							</a>
+
+					   </th>
+					   <th>Amount</th>
+					   <th>Per</th>
+					   <th><span id = "wunit"></span></th>
+					   <th>Annual</th>
+					   <th><a href = "#" class = "tooltip infolink">
+								<span>
+									<img class = "callout" src = "callout.gif" />
+									"Included" income is added to the total used to calculate the threshold ratio.
+								</span>
+							</a>Include
+
+					   </th>
+					   <th>Exclude</th>
+					</tr>
+					<tr>
+					   <td><input id = "wsource1" class = "name" type = "text"/></td>
+					   <td><input type = "text" id = "wages1"/></td>
+					   <td>
+						  <select id = "wmenu1">
+							 <option value = "1" label = "Hour"></option>
+							 <option value = "2" label = "Week"></option>
+							 <option value = "3" label = "Month"></option>
+							 <option value = "4" label = "Year"></option>
+						  </select>
+					   </td>
+					   <td><input type = "text" id = "hours1"/></td>
+					   <td><input id = "wtotal1" type = "text" readonly/></td>
+					   <td><input id = "includew1_1" name = "wtotal1radio" type = "radio" value = "1" checked /></td>
+					   <td><input id = "includew1_0" name = "wtotal1radio" type = "radio" value = "0" /></td>
+					</tr>
+					<tr>
+					   <td><input id = "wsource2" type = "text"/></td>
+					   <td><input id = "wages2"/></td>
+					   <td>
+						  <select id = "wmenu2">
+							 <option value = "1" label = "Hour"></option>
+							 <option value = "2" label = "Week"></option>
+							 <option value = "3" label = "Month"></option>
+							 <option value = "4" label = "Year"></option>
+						  </select>
+					   </td>
+					   <td><input type = "text" id = "hours2"/></td>
+					   <td><input id = "wtotal2" type = "text" readonly/></td>
+					   <td><input id = "includew2_1" name = "wtotal2radio" type = "radio" value = "1" checked /></td>
+					   <td><input id = "includew2_0" name = "wtotal2radio" type = "radio" value = "0" /></td>
+					</tr>
+					<tr>
+					   <td><input id = "wsource3" type = "text"/></td>
+					   <td><input id = "wages3"/></td>
+					   <td>
+						  <select id = "wmenu3">
+							 <option value = "1" label = "Hour"></option>
+							 <option value = "2" label = "Week"></option>
+							 <option value = "3" label = "Month"></option>
+							 <option value = "4" label = "Year"></option>
+						  </select>
+					   </td>
+					   <td><input type = "text" id = "hours3"/></td>
+					   <td><input id = "wtotal3" type = "text" readonly/></td>
+					   <td><input id = "includew3_1" name = "wtotal3radio" type = "radio" value = "1" checked /></td>
+					   <td><input id = "includew3_0" name = "wtotal3radio" type = "radio" value = "0" /></td>
+					</tr>
+					<tr>
+					   <td><input id = "wsource4" type = "text"/></td>
+					   <td><input id = "wages4"/></td>
+					   <td>
+						  <select id = "wmenu4">
+							 <option value = "1" label = "Hour"></option>
+							 <option value = "2" label = "Week"></option>
+							 <option value = "3" label = "Month"></option>
+							 <option value = "4" label = "Year"></option>
+						  </select>
+					   </td>
+					   <td><input type = "text" id = "hours4"/></td>
+					   <td><input id = "wtotal4" type = "text" readonly/></td>
+					   <td><input id = "includew4_1" name = "wtotal4radio" type = "radio" value = "1" checked /></td>
+					   <td><input id = "includew4_0" name = "wtotal4radio" type = "radio" value = "0" /></td>
+					</tr>
+				 </table>
+			  </fieldset>
+			  <div id = "otherinc">
+				 <fieldset class = "pcfieldset">
+					<legend>Other Monthly Income</legend>
+					<table id = "othertable">
+					   <tr>
+						  <th>Type</th>
+						  <th>Monthly Income</th>
+						  <th>Annual Income</th>
+						  <th>Include</th>
+						  <th>Exclude</th>
+					   </tr>
+					   <tr>
+						  <td><label>Regular &amp; Survivor SSI</label></td>
+						  <td><input id = "ssim" /></td>
+						  <td><input id = "ssia" /></td>
+						  <td><input id = "includessi_1" name = "ssiradio" type = "radio" value = "1" checked /></td>
+						  <td><input id = "includessi_0" name = "ssiradio" type = "radio" value = "0"  /></td>
+					   </tr>
+					   <tr>
+						  <td><label>Pension / Retirement</label></td>
+						  <td><input id = "pensionm"/></td>
+						  <td><input id = "pensiona"/></td>
+						  <td><input id = "includepens_1" name = "pensionradio" type = "radio" value = "1" checked /></td>
+						  <td><input id = "includepens_0" name = "pensionradio" type = "radio" value = "0"  /></td>
+					   </tr>
+					   <tr>
+						  <td><label>Spousal Support</label></td>
+						  <td><input id = "spousalm"/></td>
+						  <td><input id = "spousala"/></td>
+						  <td><input id = "includespousal_1" name = "spousalradio" type = "radio" value = "1" checked /></td>
+						  <td><input id = "includespousal_0" name = "spousalradio" type = "radio" value = "0" /></td>
+					   </tr>
+					   <tr>
+						  <td><label>Veterans Benefits</label></td>
+						  <td><input id = "vetm"/></td>
+						  <td><input id = "veta"/></td>
+						  <td><input id = "includevet_1" name = "vetradio" type = "radio" value = "1" checked /></td>
+						  <td><input id = "includevet_0" name = "vetradio" type = "radio" value = "0" /></td>
+					   </tr>
+					   <tr>
+						  <td><label>Rental Income</label></td>
+						  <td><input id = "rentm"/></td>
+						  <td><input id = "renta"/></td>
+						  <td><input id = "includerent_1" name = "rentradio" type = "radio" value = "1" checked /></td>
+						  <td><input id = "includerent_0" name = "rentradio" type = "radio" value = "0" /></td>
+					   </tr>
+					   <tr>
+						  <td><label>Dividends &amp; Interest</label></td>
+						  <td><input id = "divintm"/></td>
+						  <td><input id = "divinta"/></td>
+						  <td><input id = "includedivint_1" name = "divintradio" type = "radio" value = "1" checked /></td>
+						  <td><input id = "includedivint_0" name = "divintradio" type = "radio" value = "0" /></td>
+					   </tr>
+					   <tr>
+						  <td><label>Soc. Security Disab.</label></td>
+						  <td><input id = "ssdm"/></td>
+						  <td><input id = "ssda"/></td>
+						  <td><input id = "includessd_1" name = "ssdradio" type = "radio" value = "1" /></td>
+						  <td><input id = "includessd_0" name = "ssdradio" type = "radio" value = "0" checked /></td>
+					   </tr>
+					   <tr>
+						  <td><label>Unemp. Insurance</label></td>
+						  <td><input id = "unempm"/></td>
+						  <td><input id = "unempa"/></td>
+						  <td><input id = "includeunemp_1" name = "unempradio" type = "radio" value = "1" /></td>
+						  <td><input id = "includeunemp_0" name = "unempradio" type = "radio" value = "0" checked /></td>
+					   </tr>
+					   <tr>
+						  <td><label>Workers Comp.</label></td>
+						  <td><input id = "wcm"/></td>
+						  <td><input id = "wca"/></td>
+						  <td><input id = "includewc_1" name = "wcradio" type = "radio" value = "1" /></td>
+						  <td><input id = "includewc_0" name = "wcradio" type = "radio" value = "0" checked /></td>
+					   </tr>
+					   <tr>
+						  <td><label>Child Support</label></td>
+						  <td><input id = "csm"/></td>
+						  <td><input id = "csa"/></td>
+						  <td><input id = "includecs_1" name = "csradio" type = "radio" value = "1" /></td>
+						  <td><input id = "includecs_0" name = "csradio" type = "radio" value = "0" checked /></td>
+					   </tr>
+					   <tr>
+						  <td><label>TANF (Cash Transfers)</label></td>
+						  <td><input id = "tanfm"/></td>
+						  <td><input id = "tanfa"/></td>
+						  <td><input id = "includetanf_1" name = "tanfradio" type = "radio" value = "1" /></td>
+						  <td><input id = "includetanf_0" name = "tanfradio" type = "radio" value = "0" checked /></td>
+					   </tr>
+					   <tr>
+						  <td><input id = "other1" class = "name" type = "text" placeholder = "Other Income"/></td>
+						  <td><input id = "other1m"/></td>
+						  <td><input id = "other1a"/></td>
+						  <td><input id = "includeothinc1_1" name = "other1radio" type = "radio" value = "1" checked /></td>
+						  <td><input id = "includeothinc1_0" name = "other1radio" type = "radio" value = "0" /></td>
+					   </tr>
+					   <tr>
+						  <td><input id = "other2" class = "name" type = "text" placeholder = "Other Income"/></td>
+						  <td><input id = "other2m"/></td>
+						  <td><input id = "other2a"/></td>
+						  <td><input id = "includeothinc2_1" name = "other2radio" type = "radio" value = "1" checked /></td>
+						  <td><input id = "includeothinc2_0" name = "other2radio" type = "radio" value = "0" /></td>
+					   </tr>
+					   <tr>
+						  <td><input id = "other3" class = "name" type = "text" placeholder = "Other Income"/></td>
+						  <td><input id = "other3m"/></td>
+						  <td><input id = "other3a"/></td>
+						  <td><input id = "includeothinc3_1" name = "other3radio" type = "radio" value = "1" checked /></td>
+						  <td><input id = "includeothinc3_0" name = "other3radio" type = "radio" value = "0" /></td>
+					   </tr>
+					</table>
+				 </fieldset>
+			  </div>
+			  <div id = "totals">
+				 <fieldset class = "pcfieldset">
+					<legend>Totals</legend>
+					<div id = "reduction">
+					<a href = "#" style = "padding-right:10px;" class = "fl tooltip infolink">
+						<span>
+							<img class = "callout" src = "callout.gif" />
+							A positive dollar amount reduces available income. You might add
+							certain litigation expenses.
+						</span>
+					</a>
+					   <label class = "fl">Reduce by:</label>	
+					   <input class = "leftmargin fl" id = "reducecosts"/>
+					</div>
+					<br>
+					<table id = "totalstable">
+						<tr>
+					   <th>Included</th>
+					   <th>Excluded</th>
+					   <th>Grand Total</th>
+					   </tr>
+					   <tr>
+						  <td><input id = "itotal" type = "text" readonly/></td>
+						  <td><input id = "etotal" type = "text" readonly/></td>
+						  <td><input id = "gtotal" type = "text" readonly/></td>
+					   </tr>
+					</table>
+				 </fieldset>
+			  </div>
+
+			  <div class = "clear" id = "output">
+				 <fieldset class = "pcfieldset">
+					<legend>Results</legend>
+					<div>
+					  <input id = "custompct" value = "125%"/>
+						<a href = "#" class = "fr tooltip infolink">
+							<span>
+								<img class = "callout" src = "callout.gif" />
+								Enter any percent to calculate a threshold ratio based on that percent. For example, 125% means
+								that the threshold ratio is based on 125% of the threshold value.
+							</span>
+						</a>
+					</div>
+					<table id = "resultstable">
+					   <tr>
+						  <th>Benchmark</th>
+						  <th>Threshold</th>
+						  <th>Ratio</th>
+						  <th>Custom Ratio</th>
+					   </tr>
+					   <tr>
+						  <th><label>Official Guideline</label></th>
+						  <td><input id = "opguide" readonly/></td>
+						  <td><input id = "opgtr" readonly/></td>
+						  <td><input id = "aopgtr" readonly/></td>
+					   </tr>
+					   <tr>
+						  <th><label>Official Threshold</label></th>
+						  <td><input id = "optthresh" readonly/></td>
+						  <td><input id = "opttr" readonly/></td>
+						  <td><input id = "aopttr" readonly/></td>
+					   </tr>
+					   <tr>
+						  <th><label>Supplemental Threshold</label></th>
+						  <td><input id = "supthresh" readonly/></td>
+						  <td><input id = "supttr" readonly/></td>
+						  <td><input id = "asupttr" readonly/></td>
+					   </tr>
+					   <tr>
+						  <th>
+						  <label for = "custyear">Custom Threshold</label>
+						  <input style = "text-align:center;" type = "number" id = "custyear" 
+						  placeholder = "(Year)" min = "2000"/>
+							<a href = "#" class = "tooltip infolink">
+								<span>
+									<img class = "callout" src = "callout.gif" />
+									If your custom threshold is not inflation-adjusted to the <b>most recent time period</b>, 
+									enter the year the threshold was calculated. For example, if the threshold is based on 2010 information,
+									enter "2010." The computer will adjust for inflation.
+								</span>
+							</a>
+
+						  </th>
+						  <td><input id = "custthresh"/></td>
+						  <td><input id = "cttr" hidden readonly/></td>
+						  <td><input id = "acttr" hidden readonly/></td>
+					   </tr>
+					</table>
+				<textarea id = "custdesc" placeholder = "Briefly describe this custom threshold." hidden></textarea>
+				 </fieldset>
+			  </div>
+		  </form>		
+		
+		</div>
+		 
+		<div class = "pagehead" id = "psscinstructions" hidden>
+		<h1>Instructions</h1></div>
+
+		<div class = "pagehead" id = "psscfoptions" hidden>
+
+			<fieldset class = "feeoptfieldset">
+			<legend>Fee Options</legend>
+				<table id = "feeradio">
+					<tr><td colspan = "4"></td></tr>
+					<tr>
+						<td><label for = "gt1">Empirical</label>
+							<a href = "#" class = "tooltip infolink">
+								<span>
+									<img class = "callout" src = "callout.gif" />
+									This is based on empirical estimates of a family's probability of exceeding or staying above
+									the official poverty threshold within two years.
+								</span>
+							</a>
+
+						</td>
+						<td><label for = "gt2">Flexible</label>
+							<a href = "#" class = "tooltip infolink">
+								<span>
+									<img class = "callout" src = "callout.gif" />
+									This is based on the user's subjective assessment of how fees should track a client's ability to pay.
+								</span>
+							</a>
+
+						</td>
+						<td><label for = "gt3">Both</label></td>
+						<td><label for = "coarsenmenu">Units</label>
+							<a href = "#" class = "tooltip infolink">
+								<span>
+									<img class = "callout" src = "callout.gif" />
+									For example, a fee of $275.51 in units of $1.00 is $276 and in units of $10 is $280.
+								</span>
+							</a>
+
+						</td>
+					</tr>
+					<tr>
+						<td><input id = "gt1" name = "gtypebutton" type = "radio" value = "1"></td>
+						<td><input id = "gt2" name = "gtypebutton" type = "radio" value = "2" checked></td>
+						<td><input id = "gt3" name = "gtypebutton" type = "radio" value = "3"></td>
+						<td>
+							<select class = "fl" id = "coarsenmenu">
+								<option selected value = "0.01">$0.01</option>
+								<option value = "1.00">$1.00</option>
+								<option value = "5.00">$5.00</option>
+								<option value = "10.00">$10.00</option>
+								<option value = "25.00">$25.00</option>
+								<option value = "50.00">$50.00</option>
+								<option value = "100.00">$100.00</option>
+							</select>						
+						</td>
+					</tr>
+				</table>
+						
+				 <table><td style = "width:15%;">Minimum Fee</td>
+					  <td style = "width:60%;"><div id = "fminmax"></div></td>
+					  <td style = "width:20%; padding-left:50px;">Maximum Fee</td>
+				 </table>
+				 <p id = "thresholdlabel">Select a threshold:</p>
+				 <select id = "threshselect"></select>
+				 
+					  <hr>
+
+				   <div class = "clear" hidden id = "incfeesdiv">
+					 <select id = "statemenu"></select>
+					  <table>
+						 <td class = "tar" style = "width:5%;"><input checked class = "checkbox" id = "distearn1" type = "checkbox"></td>
+						 <td class = "tal"><label class = "checklabel" for = "distearn1">Available Income Only</label>
+							<a href = "#" class = "tooltip infolink">
+								<span>
+									<img class = "callout" src = "callout.gif" />
+									The probability curve is based on Current Population Survey 2005-2014 data. It roughly estimates the
+									probability a family will exceed the official federal poverty threshold within two years. If checked,
+									the curve excludes certain sources of income, such as
+									child support and government transfers, that is (arguably) not appropriate for paying attorney fees. If
+									not checked, all sources of income are used in the calculations.
+								</span>
+							</a>
+
+						 </td>
+						 <td class = "tar" style = "width:5%;"><input class = "checkbox" id = "p125check1" type = "checkbox"></td>
+						 <td class = "tal"><label class = "checklabel"	for = "p125check1">Use 125% of Threshold</label>
+							<a href = "#" class = "tooltip infolink">
+								<span>
+									<img class = "callout" src = "callout.gif" />
+									The probability curve is based on Current Population Survey 2005-2014 data. If checked, the estimates
+									are based on the probability that a family will exceed <b>125%</b> of the official federal poverty threshold 
+									within two years. Because the official poverty threshold is based on an old, arbitrary, and poorly
+									calibrated benchmark of family economic status, this 125% adjustment arguably gives a more realistic
+									picture of a family's economic vulnerability.
+								</span>
+							</a>
+
+						 </td>
+					  </table>
+				   </div>
+				   <div hidden id = "flexiblediv">
+					  <hr>
+					 <table><td style = "width:15%;">Lower Cutoff
+							<a href = "#" class = "tooltip infolink">
+								<span>
+									<img class = "callout" src = "callout.gif" />
+									The threshold ratio below which a client is always charged the minimum.
+								</span>
+							</a>
+
+					 </td>
+						  <td style = "width:55%;"><div id = "lowerupper"></div></td>
+						  <td style = "width:20%; padding-left:25px;">Upper Cutoff
+							<a href = "#" class = "tooltip infolink">
+								<span>
+									<img class = "callout" src = "callout.gif" />
+									The threshold ratio above which a client is always charged the maximum.
+								</span>
+							</a>
+
+						  </td>
+					 </table>
+					 
+					 <table>
+					 <td style = "width:30%;">% Discount at Threshold
+							<a href = "#" class = "tooltip infolink">
+								<span>
+									<img class = "callout" src = "callout.gif" />
+									A family exactly at the threshold level would get this amount discounted off of the maximum hourly rate.
+								</span>
+							</a>
+					 </td>
+					 <td style = "width:75%;"><div id = "D"></div></td>
+					 </table>
+					 
+					 <table><td style = "width:15%;">Change Shape</td>
+						  <td style = "width:70%;"><div class = "ab" id = "uv"></div></td>
+					 </table>
+				   </div>	
+			</fieldset>
+		
+		   <fieldset id = "graphoptions" class = "graphoptfieldset">
+		   <legend>Graph</legend>
+ 			<table>
+				<div id = "g1sizediv">
+				   <td style = "width:5%;">Size</td>
+				   <td style = "width:75%;"><div id = "g1size"></div></td>
+				</div>
+			</table>
+			
+			<canvas id = "canvas1"></canvas>
+
+			<fieldset class = "innerfieldset clear">
+			   <legend>Add:</legend>
+					<table id = "povcheckdiv">
+							<td class = "tar" style = "width:5%;"><input class = "checkbox" id = "overlaydist1" type = "checkbox"></td>
+							<td class = "tal"><label class = "checklabel" for = "overlaydist1">Poverty Statistics</label>
+							<a href = "#" class = "tooltip infolink">
+								<span>
+									<img class = "callout" src = "callout.gif" />
+									Show empirical estimates of family threshold ratios. Based on 2005-2014 Current Population Survey data,
+									the estimates use the official federal poverty <b>thresholds</b> to give a rough picture of overall family
+									income. The gray bars represent percents of families within the ranges shown. The green
+									bars (if any) show the percents for families above or below the range (for example, above 4).
+								</span>
+							</a>
+
+							</td>
+						   <td class = "tar" style = "width:15%;"><span class = "bins1" hidden>Rectangles</span></td>
+						   <td class = "tal"><div class = "bins1" id = "distbins1" hidden></div></td>
+					</table>	   
+
+
+					<table>
+					   <td class = "tar" style = "width:5%;"><input class = "checkbox" id = "showmin1" type = "checkbox"></td> 
+					   <td class = "tal"><label class = "checklabel" for = "showmin1">Fee Minimum</label></td> 
+					   <td class = "tar" style = "width:5%;"><input class = "checkbox" id = "showmax1" type = "checkbox"></td> 
+					   <td class = "tal"><label class = "checklabel" for = "showmax1">Fee Maximum</label></td> 
+					   <td class = "tar" style = "width:5%;"><input class = "checkbox" id = "showt1" type = "checkbox"></td>
+					  <td class = "tal"> <label class = "checklabel" for = "showcustom1">Threshold</label></td> 
+					  <td class = "tar" style = "width:5%;"> <input class = "checkbox" id = "showcustom1" type = "checkbox" checked></td>
+					   <td class = "tal"><label  class = "checklabel" for = "custom1" checked>Custom Ratio</label></td> 
+					   <td class = "tal"><input style = "background-color:white; text-align:left;" id = "custom1" readonly></td>
+					 </table> 
+
+				</fieldset>
+
+				<table>
+				<tr>
+				<td><fieldset class = "panelfieldset innerfieldset">
+				   <legend>Horizontal Axis</legend>
+				   <table>
+				   <tr><td class = "tal" style = "width:20%;"><span>Range</span></td>
+					<td class = "tal"><div id = "xminmax1"></div></td>
+				  </tr>
+				  </table>
+				  <table>
+				  <tr>
+					<td class = "tal" style = "width:20%;"><span>Ticks (#)</span></td>
+					<td class = "tal" style = "width:50%;"><div id = "xtick1slider"></div></td>
+					<td class = "tar" style = "width:10%;"><input class = "checkbox" id = "xgridcheck1" name = "xgridcheck1" type = "checkbox"></td>
+					<td class = "tal" style = "width:15%;"><label class = "checklabel">Grid</label></td>
+				  </tr>   
+				  </table> 
+				</fieldset></td>
+				<td><fieldset class = "panelfieldset innerfieldset">
+				   <legend>Vertical Axis</legend>
+				   <table>
+					  <tr>
+					  <td style = "width:10%;"><input checked = "checked" class = "checkbox" id = "yautoscale1" type = "checkbox"></td> 
+					  <td style = "width:25%;"><label class = "checklabel" for = "yautoscale1">Auto-Scale</label></td>
+					  <td><span hidden  class = "ymm">Range</span></td>
+					  <td  style = "width:50%;"><div class = "ymm" id = "yminmax1" hidden></div></td>
+					  </tr>
+					 </table>
+					 <table>
+					 <tr>
+					<td class = "tal" style = "width:20%;"><span>Ticks (#)</span></td>
+					<td class = "tal" style = "width:50%;"><div id = "ytick1slider"></div></td>
+					<td class = "tar" style = "width:10%;"><input class = "checkbox" id = "ygridcheck1" name = "ygridcheck1" type = "checkbox"></td>
+					<td class = "tal" style = "width:15%;"><label class = "checklabel">Grid</label></td>
+					  </tr></table>
+				</fieldset></td>
+				</tr></table>	
+			 </fieldset>		
+
+			<div hidden>
+			   Graph PMin:<input id = "gpmin1" max = "0.5" min = "0" step = "0.05" type = "number" value = "0.15">
+			   Graph PMax:<input id = "gpmax1" max = "1" min = "0.5" step = "0.05" type = "number" value = "0.85">
+			</div>
+			 
+			<fieldset class = "tablefieldset"><legend>Table</legend>
+				<input id = "showtablebutton" type=button value = "Show Table" />
+				<table class = "feetable" id = "feetable">
+				</table>
+			</fieldset>
+
+		</div> 
+
+		<div class = "pagehead" id = "psscequations" hidden>
+			<div id = "equations">
+				<fieldset class = "optfieldset pwequation">
+				   <legend>Flexible Model Based on "Available" Income</legend>
+				   <p>A flexible, "piecewise" model gives the user great freedom to craft a sliding-scale fee that fits his or her intuition
+				   about how much client income is "available" to pay the attorney.</p>
+				   \[ {\small fee(t) = \begin{cases} m &amp; \text{if } 0
+				   \leq t &lt; t_{L} \\[1em] m +
+				   t^{-s_{L}}\left(1-\frac{t}{t_{L}}\right)\left(\frac{t_{L}\left(m-dM\right)}{\left(1-t_{L}\right)}\right)
+				   &amp; \text{if } t_{L} \leq t &lt; 1 \\[1em]
+				   M-\left(1-\frac{t}{t_{U}}\right)\left(t+q\right)t^{-s_{U}} &amp; \text{if } 1 \leq t &lt; t_{U}
+				   \\[1em] M &amp; \text{if } t_{U} \leq t \end{cases} } {\small \text{, where
+				   }q=\frac{\left(t_{U} \left(M-dM-1\right)+1\right)}{\left(t_{U}-1\right)} \text{ and }
+				   \begin{align*} m &amp;= \text{Minimum Fee} \\ M &amp;= \text{Maximum Fee} \\ d &amp;= \text{Discount}
+				   \\ t_{L} &amp;= \text{Lower Cut-Off} \\ t_{U} &amp;= \text{Upper Cut-Off} \\ s_{L} &amp;= \text{Lower
+				   Shape} \\ s_{U} &amp;= \text{Upper Shape} \\ \end{align*} } \]
+				   <div class = "equationinput">You selected 
+				   m = <span class = "minout"></span> 
+				   M = <span class = "maxout"></span> 
+				   d=<span class = "dout"></span> 
+				   t<sub>L</sub> = <span class = "tLout"></span> 
+				   t<sub>U</sub> = <span class = "tUout"></span> 
+				   s<sub>L</sub> = <span class = "sLout1"></span><sup>2</sup> 
+				   = <span class = "sLout2"></span> 
+				   and s<sub>U</sub>
+				   = <span class = "sUout1"></span><sup>2</sup> 
+				   = <span class = "sUout2"></span>.
+
+				   </div>
+				</fieldset>
+				<fieldset class = "optfieldset lequation">
+				   <legend>Economic Vulnerability Model</legend>
+				   <p>These equations calibrate sliding-scale fees to a client's economic vulnerability. The numbers come from
+				   empirical estimates of a family's probability of exceeding a threshold.</p>
+				   \[ {\small fee(t) = \max(b(t),m) \text{, where }
+				   b(t) = \frac{M}{0.98} \times \left( \mu + \frac{0.98-\mu}{1+k \times t^{-g}} \right) \text{
+				   and} } {\small \begin{align*} m &amp;= \text{Minimum Fee} \\ M &amp;= \text{Maximum Fee} \\ k &amp;=
+				   ``\text{Discount'' Parameter} \\ g &amp;= \text{Shape Parameter} \\ \mu &amp;= \text{Minimum
+				   Parameter} \end{align*} } \]
+				   <div class = "equationinput">Calculations based on user inputs of 
+				   		m = <span class = "minout"></span> 
+				   		M = <span class = "maxout"></span> and on empirical estimates of 
+				   		k = <span class = "kout"></span>;  g = <span class = "gout"></span>  and 
+				   		&mu; = <span class = "muout"></span> 
+				   		<span class = "stateout"></span> 
+				   		<span class = "availableout"></span> 
+				   		<span class = "p125out"></span>.
+				   </div>
+				</fieldset>
+			 </div>
+
+		</div>
+
+		<div class = "pagehead" id = "previnstructions" hidden>
+		<h1>Instructions</h1></div>
+
+		<div class = "pagehead" id = "prevclientdata" hidden>
+			<fieldset>
+			<legend>Client Poverty</legend>
+ 			<table>
+				<div id = "g2sizediv">
+				   <td style = "width:5%;">Size</td>
+				   <td style = "width:75%;"><div id = "g2size"></div></td>
+				</div>
+			</table>
+			<canvas id = "canvas2"></canvas>
+
+ 			<table>
+				   <td style = "width:5%;">Shape</td>
+				   <td style = "width:75%;"><div class = "ab" id = "myab"></div></td>
+			</table>
+						
+
+						<table id = "povcheckdiv2">
+							   <td class = "tar"><input class = "checkbox" id = "overlaydist2" type = "checkbox"></td>
+							   <td class = "tal"><label class = "checklabel" for = "overlaydist2">Poverty Statistics</label> </td>
+                               <td class = "tar"><input checked class = "bins2 checkbox" id = "distearn2" type = "checkbox" hidden/></td>
+                               <td class = "tal"><label class = "bins2 checklabel" for = "distearn2" hidden>Available Income Only</label></td> 
+							   <td class = "tal" style = "width:10%;"><span class = "bins2" hidden>Rectangles</span></td>
+							   <td class = "tal" style = "padding-right:20px;"><div class = "bins2" id = "distbins2" hidden></div></td>
+						</table>	   
+						<table>
+                           <td class = "tar" style = "width:10%">Maximum</td>
+                           <td class = "tal" style = "padding-right:15px;"><div id = "xminmax2"></div></td>
+                           <td class = "tar">Ticks (#)</td>
+                           <td class = "tal" style = "padding-left:15px;"><div id = "xtick2slider"></div></td>
+						</table>
+                            <input id = "gpmin2" max = "0.5" min = "0" step = "0.1" type = "number" value = "0.15" hidden> 
+                           <input id = "gpmax2" max = "1" min = "0.5" step = "0.1" type = "number" value = "0.85" hidden>
+             </fieldset>              
+
+		</div>
+
+		<div class = "pagehead" id = "prevresults" hidden>
+		   <fieldset id = "graphoptions" class = "graphoptfieldset">
+		   <legend>Graph</legend>
+ 			<table>
+				<div id = "g3sizediv">
+				   <td style = "width:5%;">Size</td>
+				   <td style = "width:75%;"><div id = "g3size"></div></td>
+				</div>
+			</table>
+			<canvas id = "canvas3"></canvas>
+
+			<table>
+			<tr>
+			<td><fieldset class = "panelfieldset innerfieldset">
+			   <legend>Horizontal Axis</legend>
+			   <table>
+			   <tr><td class = "tal" style = "width:20%;"><span >Range</span></td>
+				<td class = "tal"  style = "padding-right:50px;"><div id = "xminmax3"></div></td>
+			  </tr>
+			  </table>
+			  <table>
+			  <tr>
+				<td class = "tal" style = "width:20%;"><span>Ticks (#)</span></td>
+				<td class = "tal" style = "width:50%;"><div id = "xtick3slider"></div></td>
+				<td class = "tar" style = "width:10%;"><input class = "checkbox" id = "xgridcheck3" name = "xgridcheck3" type = "checkbox"></td>
+				<td class = "tal" style = "width:15%;"><label class = "checklabel">Gridlines</label></td>
+			  </tr>   
+			  </table> 
+			</fieldset></td>
+			<td><fieldset class = "panelfieldset innerfieldset">
+			   <legend>Vertical Axis</legend>
+			   <table>
+				  <tr>
+				  <td style = "width:10%;"><input checked = "checked" class = "checkbox" id = "yautoscale3" type = "checkbox"></td> 
+				  <td style = "width:25%;"><label class = "checklabel" for = "yautoscale3">Auto-Scale</label></td>
+				  <td><span hidden  class = "yauto3">Range</span></td>
+				  <td  style = "width:50%; padding-right:50px;"><div class = "yauto3" id = "yminmax3" hidden></div></td>
+				  </tr>
+				 </table>
+				 <table>
+				 <tr>
+				<td class = "tal" style = "width:20%;"><span>Ticks (#)</span></td>
+				<td class = "tal" style = "width:50%;"><div id = "ytick3slider"></div></td>
+				<td class = "tar" style = "width:10%;"><input class = "checkbox" id = "ygridcheck3" name = "ygridcheck3" type = "checkbox"></td>
+				<td class = "tal" style = "width:15%;"><label class = "checklabel">Gridlines</label></td>
+				  </tr></table>
+			</fieldset></td>
+			</tr></table>	
+		 </fieldset>
+
+			<input id = "gpmin3" max = "0.5" min = "0" step = "0.1" type = "number" value = "0.1" hidden> 
+			<input id = "gpmax3" max = "1" min = "0.5" step = "0.1" type = "number" value = "0.9" hidden> 
+
+
+
+		</div>
+
+		<div class = "pagehead" id = "prevequations" hidden>
+			<fieldset class = "optfieldset bbnequation">
+			   <legend>Client Distribution Equations</legend>
+			   <p>Client distributions are sets of ordered pairs, [ \( \hat{x_{k}} , \hat{y_{k}} \) ], where \( \sum_{k = 0}^{n} \hat{y_{k}} = 1 \), </p>
+			   \[ \small \hat{y} (k,n) = \text{the Beta Binomial P.M.F.} = {n \choose k} \frac{\text{B}(k + \alpha, n - k + \beta)}{\text{B}(\alpha,\beta)} \text{, and } \\
+			   \small \hat{x} (k,n) = X_{\text{min}} + k \times \frac{X_{\text{max}} - X_{\text{min}}}{n} \text{, } \]
+			   <p> where \( n = \) the number of bins, \( 0 \leq k \leq n \text {; B}(\alpha,\beta) \) is the Beta function; \( X_{\text{min}} \) is the minimum 
+			   threshold value on the horizontal axis; and \( X_{\text{max}} \) is the maximum.</p>
+
+			   <div class = "equationinput">
+				  The current setting is \(n\) = 
+				  <span class = "binout"></span>, \(X_{\text{min}}\) = 
+				  <span class = "xminout"></span>, \(X_{\text{max}}\) = 
+				  <span class = "xmaxout"></span>, \(\alpha\) = \(e^{}\)
+				  <sup>
+				  <span class = "alphaout"></span>
+				  </sup>, and \(\beta\) = \(e^{}\)
+				  <sup>
+				  <span class = "betaout"></span>
+				  </sup>. 
+				  You can confirm that the default distribution is [ 0 , 10.3% ], [ 0.4 , 6.66% ], [ 0.8 , 5.75% ], [ 1.2 , 5.43% ], [ 1.6 , 5.38% ], [ 2 , 5.54% ], [ 2.4 , 5.92% ], [ 2.8 , 6.64% ], [ 3.2 , 8.00% ], [ 3.6 , 11.2% ], and [ 4 , 29.2% ].
+			   </div>
+		  </fieldset> 
+		</div>
+						
+		<div class = "pagehead" id = "pprint" hidden>
+		 	<div id = "printpageheader">
+            <h1>Printer-Friendly Summary</h1>
+            <fieldset>
+            <legend>Options</legend>
+            <p>You might wish to include a number or code linked to your client or potential client. Please be mindful of confidentiality obligations. This site does not track or record anything you input into the system. The same may not be true of your network, wireless (router) provider, ISP provider, or cell tower.</p>
+            <label for = "clientid">Client Identifier:</label><input id = "clientid" type = "text"/>
+            <br>
+            <textarea id = "clientnotes" placeholder = " Notes added here will be included in the printout."></textarea>
+
+				<p>Client family income is based on what time period?<input type = "text" id = "incperiod" placeholder = "e.g., Jan-Dec 2014" /></p>
+			<div id = "printoptionsradio">
+			<h2>The sliding-scale fee structure roughly tracks a family's:</h2>
+				<div><span class = "narrow"><input id = "ssopt1" name = "ssopt" type = "radio" value = "1"></span><label for = "ssopt1">Probability of escaping poverty or staying out of poverty ("Logistic" or "Empirical" Model)</label></div>
+				<div><span class = "narrow"><input id = "ssopt2" name = "ssopt" type = "radio" value = "2"></span><label for = "ssopt2">Income available for spending on non-essentials ("Flexible" Model)</label></div>
+			</div>
+			<h2>The printout should include:</h2>
+			<ul id = "printoptionstable">
+				<li><span class = "narrow"><input id = "pinctr" type = "checkbox" checked/></span><label>Family Income Calculations</label></li>
+				<li><span class = "narrow"><input id = "pfeegraph" type = "checkbox"/></span><label>Sliding-Scale Fee Graph</label></li>
+				<li><span class = "narrow"><input id = "pfeetable" type = "checkbox"/></span><label>Sliding-Scale Fee Table</label></li>
+				<li><span class = "narrow"><input id = "psourcesch" type = "checkbox"/></span><label>Explanatory Detail</label></li>
+				<li><span class = "narrow"><input id = "pequations" type = "checkbox"/></span><label>Underlying Equations</label></li>
+			</ul>
+
+			</fieldset>
+			</div>
+
+			<h1>Sliding-Scale Fee</h1>
+			Client ID:  <span class = "under" id = "clientidout"></span>.<br>
+			Notes / Comments: <span class = "under" id = "clientnotesout"></span>
+			<div id = "pinctrout">
+				<h2>Threshold Ratio Calculation</h2>
+				<table id = "inctabout"></table>
+
+				<p>Family income is based on the 12-month period: <span class = "under" id = "incperiodout"></span>. Family income from the following sources was 
+				either entered as zero or excluded from the calculations: <ul id = "incsourceout"></ul>
+				<p><span class = "under" id = "excludedincout"></span> is excluded for third-party costs or expenses (for example, court filing fees), 
+				leaving <span class = "under" id = "ptotavail"></span> "available" to spend on taxes, remaining essentials, and non-essentials.</p>
+			</div>			
+			<p>The family's threshold ratio is <span class = "under" id = "ptrout">,</span>, using a threshold of <span class = "under" id = "ptout"></span> based 
+			on <span class = "under" id = "threshexp"></span>.
+			Using the family's <i>official federal poverty threshold</i> as a benchmark, roughly <span class = "under" id = "inccompare1"></span> of 
+			families in <span class = "under" id = "pstateout"></span> had lower official poverty threshold ratios in 2014 (less "available" income) 
+			and <span class = "under" id = "inccompare2"></span> of families had higher (more "available" income).
+			</p>
+			
+			<h2>Sliding-Scale Fee Calculation</h2>
+			<p>The sliding-scale fee structure is based on <span class = "under" id = "pssdescout"></span>. The fee, based on 
+			information entered into this site, is <span class = "under" id = "pfeeout"></span>.</p>
+
+			<div id = "showgraph" hidden>
+			<h1>Graph</h1>
+			<canvas id = "canvas4"></canvas>
+			</div>
+
+			<div id = "showtable" hidden>
+			<h1>Table</h1>
+			<table id = "printtable">
+			</table>
+			</div>
+
+			<div id = "showequations" hidden>
+			<h1>Equations</h1>
+			<div id = "equations">
+				<div class = "optfieldset pwequation">
+				   <p>A flexible, "piecewise" model gives the user great freedom to craft a sliding-scale fee that fits his or her intuition
+				   about how much client income is "available" to pay the attorney.</p>
+				   \[ {\small fee(t) = \begin{cases} m &amp; \text{if } 0
+				   \leq t &lt; t_{L} \\[1em] m +
+				   t^{-s_{L}}\left(1-\frac{t}{t_{L}}\right)\left(\frac{t_{L}\left(m-dM\right)}{\left(1-t_{L}\right)}\right)
+				   &amp; \text{if } t_{L} \leq t &lt; 1 \\[1em]
+				   M-\left(1-\frac{t}{t_{U}}\right)\left(t+q\right)t^{-s_{U}} &amp; \text{if } 1 \leq t &lt; t_{U}
+				   \\[1em] M &amp; \text{if } t_{U} \leq t \end{cases} } {\small \text{, where
+				   }q=\frac{\left(t_{U} \left(M-dM-1\right)+1\right)}{\left(t_{U}-1\right)} \text{ and }
+				   \begin{align*} m &amp;= \text{Minimum Fee} \\ M &amp;= \text{Maximum Fee} \\ d &amp;= \text{Discount}
+				   \\ t_{L} &amp;= \text{Lower Cutoff} \\ t_{U} &amp;= \text{Upper Cutoff} \\ s_{L} &amp;= \text{Lower
+				   Shape} \\ s_{U} &amp;= \text{Upper Shape} \\ \end{align*} } \]
+				   <div class = "equationinput">You selected 
+				   m = <span class = "minout"></span> 
+				   M = <span class = "maxout"></span> 
+				   d=<span class = "dout"></span> 
+				   t<sub>L</sub> = <span class = "tLout"></span> 
+				   t<sub>U</sub> = <span class = "tUout"></span> 
+				   s<sub>L</sub> = <span class = "sLout1"></span><sup>2</sup> 
+				   = <span class = "sLout2"></span> 
+				   and s<sub>U</sub>
+				   = <span class = "sUout1"></span><sup>2</sup> 
+				   = <span class = "sUout2"></span>.
+				   </div>
+				</div>
+				<div class = "optfieldset lequation">
+				   <legend>Economic Vulnerability Model</legend>
+				   <p>These equations calibrate sliding-scale fees to a client's "resistance to poverty."</p>
+				   \[ {\small fee(t) = \max(b(t),m) \text{, where }
+				   b(t) = \frac{M}{0.98} \times \left( \mu + \frac{0.98-\mu}{1+k \times t^{-g}} \right) \text{
+				   and} } {\small \begin{align*} m &amp;= \text{Minimum Fee} \\ M &amp;= \text{Maximum Fee} \\ k &amp;=
+				   ``\text{Discount'' Parameter} \\ g &amp;= \text{Shape Parameter} \\ \mu &amp;= \text{Minimum
+				   Parameter} \end{align*} } \]
+				   <div class = "equationinput">Calculations based on user inputs of 
+				   		m = <span class = "minout"></span> 
+				   		M = <span class = "maxout2"></span> and on empirical estimates of 
+				   		k = <span class = "kout"></span>;  g = <span class = "gout"></span>  and 
+				   		&mu; = <span class = "muout"></span> 
+				   		<span class = "stateout"></span> 
+				   		<span class = "availableout"></span> 
+				   		<span class = "p125out"></span>.
+				   </div>
+				</div>
+			 </div>
+
+
+			</div>
+
+			<div id = "showsource" hidden>
+				<h1>Explanations</h1>
+				<span id = "pexplainme"></span>
+			</div>
+
+			<div id = "disclaimer">
+				<h1>Terms of Use</h1>
+				<p>We develop the models used on this site,
+				do appropriate statistical and empirical research, program  and maintain the site. We do this with care and alacrity in order
+				to advance access to justice. Even so, the content is provided with no warranty that calculations, models, methods, projections, nor data underlying 
+				data are accurate or current. In using or continuing to use the content on this website, you consent to our 
+				<a href = "https://tworiverslaw.net/ssc/sscterms.html">Terms of Use</a>, which we occasionally update. Read and understand them.</p>
+			</div>
+
+			</div>
+
+			<div class = "pagehead pss" id = "faqsdiv" hidden>
+				<h1>Frequently (and Some Infrequently) Asked Questions</h1>
+				<h3 class = "question" id = "q_1">Given their measurement problems should anyone bother with <i>thresholds</i>?</h3>
+				<div class = "answer" id = "ans_1" hidden><li>In order to compare families in terms of their economic status, <i>some</i> objective benchmark of 
+				need, available income, or economic vulnerability is required. Otherwise comparisons become hopelessly relativistic.
+				Nearly all of us are poor if we use Bill Gates as the benchmark. Thresholds are far from perfect, but they represent
+				an objective, population-level criterion of family economic status that anchors comparisons.</li></div>
+
+				<h3 class = "question"  id = "q_2">Why not base a sliding scale on raw family income? It's easier.</h3>
+				<div class = "answer" id = "ans_2" hidden><li>Because it doesn't account for family composition and because it doesn't 
+				use any objective standard of need. Larger families and families in areas with lower costs of living (such as rural areas) will
+				have more favorable fee structures than smaller families or families facing higher costs of living. This is 
+				why the census bureau uses threshold ratios and why it has been working hard to improve its poverty measurements.</li></div>
+				
+				<h3 class = "question"  id = "q_3">Why not instead base the scale on population medians or quantiles (<i>i.e.</i>, the 
+				bottom 20% of the family income distribution)? Or averages?</h3>
+				<div class = "answer" id = "ans_3" hidden><li>Because this doesn't account for family composition and because it doesn't 
+				rely on any objective standard of need. The scale would mostly benefit retirees, rural families, and college students. 
+				Now, if you employ empirical income distributions for your area, perhaps using the American Community Survey from census.gov, and
+				estimated different distributions for different classes of family composition, you would be doing something closer to
+				what threshold ratios accomplish. But threshold ratios offer the additional advantage of permitting comparisons among families
+				in with different compositions and in different areas. Income distributions are very skewed; arithmetical averages describe
+				 them poorly and should not be used for that purpose.</li></div>
+
+				<h3 class = "question"  id = "q_4">Thresholds sound fine, but threshold <i>ratios</i> seem too complicated. 
+				Why not just compute $I - $T, where $I is the family's income and $T is the family's threshold?</h3>
+				<div class = "answer" id = "ans_4" hidden><li>Because the value of one additional dollar of income is not the same for 
+				different families. For example, a family of one person that is $1,000 over its threshold is better off than a family with
+				one adult and three kids that is $1,000 over <i>its</it> threshold.</i></li></div>
+				
+				<h3 class = "question"  id = "q_5">What about family <i>assets</i>? If my client has no job, no government transfers, no other income, but has $100,000 in the bank,
+				why should I give him discount?</h3>
+				<div class = "answer" id = "ans_5" hidden><li>You might not want to. The relationship between assets and income is 
+				<a href = "https://www.federalreserve.gov/pubs/bulletin/2012/pdf/scf12.pdf">not straightforward</a> for most Americans. 
+				But consider:  Accounting for a client's assets without taking into account the client's <i>liabilities</i>
+				puts your thumb on the scale. And accounting for <i>income</i> is hard enough. Is the extra difficulty of estimating net asset value worth it?
+				Also, what principles will you use to distinguish liquid from illiquid assets? What if the money is
+				in an IRA? A spendthrift trust in the client's name?</li>
+				<li>Of course, situations like that posed by this question can and do arise. Some organizations (such
+				as Oregon's <a href = "https://www.osbar.org/_docs/public/diy/modestmeansapp.pdf">modest means" program for discounted legal services</a>) do wade into these waters. 
+				But they are deep. We, at least, are skeptical that
+				sufficient analysis informs most such approaches. Or, at least, we are skeptical that organizations can explain or justify their approach with
+				a degree of analytical clarity that demonstrates a solid grasp of the associated measurement issues.</li>
+				<li><i>Nevertheless</i>, we think that attorneys would be entirely justified
+				in developing and employing a model that <b>does</b> engage the measurement issues and articulate its resolution of them.</li></div>
+				
+				<h3 class = "question"  id = "q_6">What about pre-tax versus post-tax income? Should I reduce "available" income by taxes paid or increase it
+				by tax credits?</h3>
+				<div class = "answer" id = "ans_6" hidden><li>Good question. The issue is muddy. A smart answer will deeply engage the mechanics of the specific threshold used.</li>
+				<li>When the U.S. government <i>statistically analyzes</i> poverty, tax credits (and government transfers) are included by the 
+				supplemental poverty measure and excluded by the official measures. <i>See</i> 
+				<a href = "https://www.irp.wisc.edu/publications/fastfocus/pdfs/FF14-2012.pdf">David S. Johnson and Timothy M. Smeeding, 2012, "A Consumer's Guide to Interpreting Various U.S. Poverty Measures," Fast Focus No. 14-2012, 
+				based on K. Short, The Research Supplemental Poverty Measure: 2011, Current Population Reports, P60-244, November 2012, U.S. Census Bureau</a>. 
+				Since the supplemental poverty threshold is based on pre-tax income and includes government transfers, 
+				then one could argue that comparing a family to that threshold requires doing likewise.</li>
+				<li>On the other hand, the purpose of the sliding-scale fee structure is not to describe a population's well-being. The purpose is to 
+				calibrate attorney fees to a client's <b>available income</b> or a client's <b>economic vulnerability</b> by incorporating a threshold that reflects 
+				local costs of living. Money spent on payroll and income taxes, in-kind transfers, and sums
+				earmarked for specific purposes (<i>i.e.</i>, child support) are not 'available' income in this sense and it seems
+				bizarre to include them in the numerator of a threshold ratio, even if they appear in its denominator.</li>
+				<li>We hasten to add that a metric like the <a href = "https://www.selfsufficiencystandard.org/">self-sufficiency standard</a> helps somewhat by calculating 
+				the amount of (non-transfer, non-earmarked) income a family <i>would need</i> in order to not survive without being eligible for
+				 government transfers. Tax payments and credits and
+				government transfers are cleanly accounted for. Such a metric does not completely resolve the difficulties&mdash;particularly when
+				"economic vulnerability" is the basis of the fee structure, since that model uses an official poverty threshold as a benchmark of
+				family need.</li>
+				<li>This is, admittedly, distressing. It helps (us at least) to remember that:</li>
+				<ol><li>Government programs and nonprofits routinely give or deny families life-altering aid on the basis of chaotic logic, 
+				wildly inconsistent	measures of family resources, and thresholds (official poverty guidelines) at best only loosely related a family's
+				 economic status.</li>
+				<li>A for-profit firm does not need to give any discounts at all.</li>
+				<li>Not using a sliding scale at all is, for all intents and purposes, equivalent to using a sliding scale and then grossly overstating
+				every client's income to charge all cients the same, maximum fee. So as long as you consistently used the same technique with all clients,
+				even a technique with measurement error would be an improvement.</li>
+				<li>We're working on it.</li></ol>
+				</div>
+				
+				<h3 class = "question"  id = "q_7">I'll go broke if I use a sliding-scale!</h3>
+				<div class = "answer" id = "ans_7" hidden>
+				<li>Some attorneys would earn less than they would otherwise. The revenue projections are 
+				intended to help identify a sliding-scale fee structure that suits the attorney's income goals. 
+				Not all for-profit firms have income maximization
+				as their lone goal. And some clients who might not otherwise afford 
+				an attorney might instead be able to afford one offering a sliding-scale fee. Those might be additional clients&mdash;not maximum-fee-paying
+				clients you lost.</li>
+				<li>It is important to distinguish the issue of whether to have a sliding-scale fee structure from the decision to serve a 
+				particular client base. Only you know who your clients are. There is no shame in exclusively serving wealthy clients.</li></div>
+
+				<h3 class = "question"  id = "q_8">What about "needy" businesses and nonprofits?</h3>
+				<div class = "answer" id = "ans_8" hidden><li>The lynchpin of our sliding-scale approach is "family" income. 
+				The logic spelled out here does not
+				generalize in a straightforward manner to entities. But this is a very important issue and producing a
+				coherent sliding-scale approach for entities is one of our highest priorities.</li>
+				</div>
+
+				<h3 class = "question"  id = "q_9">Clients with no available income have zero dollars available for attorneys, filing fees,
+				or litigation expenses. How can they be expected to pay <i>anything</i>?</h3>
+				<div class = "answer" id = "ans_9" hidden><li>Fair point. Our approach is not a panacea. Lack of access to
+				justice is a difficult problem. Our ideas:  Show attorney show to charge less, and improve on the random discounting
+				that attorneys often do on the basis of impressionistic data about client need. If you have a better idea that moves
+				the conversation beyond the stale access-to-justice paradigms of the 1970s, we'd love to hear it.</li>
+				</div>
+
+
+				<h3 class = "question" id = "q_10">Can I help?</h3>
+				<div class = "answer" id = "ans_10" hidden><li>Yes! We need help from researchers, journalists, politicians, lawyers, judges, administrators, 
+				computer programmers, and critics. We are desperate to advance discourse on access to justice beyond its current, 
+				decades-old, dusty, and 
+				stultefying frameworks. Got an idea for improving the calculator? A logical argument that puts it on more solid footing,
+				or that addresses a challenging issue? Want to talk about implementation, governance, or other thorny issues? 
+				<b>Please contact us!</b></li>
+				</div>
+
+				<h3 class = "question" id = "q_11">I've been advised by mentors and businesspeople that I should charge only one rate for everything.</h3>
+				<div class = "answer" id = "ans_11" hidden><li>Well, it certainly makes things easier. And to the extent potential clients know as much, it might
+				deter them from attempting to negotiate a cheaper fee.</li>
+				<li>Sometimes such advice seems intended to avoid developing a <i>reputation</i> of favoratism. But of course, attorneys who
+				price out substantial segments of the population from the "market" are cultivating precisely such a reputation&mdash;favoring wealthy over poorer
+				people. Asserting that the attorney shouldn't address the problem with a sliding-scale fee
+				is the same as arguing that those with enough money to pay "market" rates should be preferred over those that don't. (For those
+				who like to think in market terms, Adam Smith's distinction
+				between "natural" demand and "effectual" demand is useful here. <i>See</i> Wealth of Nations, Pp. 62ff in the 1976 Cannan edition.)</li> 
+				<li>Sometimes the assertion that businesses should only market one rate is animated by a worry about the <i>legal consequences</i> of 
+				price discrimination. This a meatier issue that does not seem to get the attention it deserves. "Differential pricing" is a 
+				newer marketing-driven strategy for increasing sales that makes heavy use of different prices offered to differently situated
+				people. And of course, dickering and negotiating prices is a deeply rooted economic practice in which different people end up 
+				paying different amounts for the same good. Singling out sliding-scales based on
+				economic vulnerability or a client's ability to pay	as <i>the</i> potentially problematic practice seems arbitrary.
+				But the issue remains one for clear-headed discussion.</li>
+				<li>Naive economic arguments citing "the public welfare" occasionally motivate complaints about 
+				sliding-scale fees. At best such arguments cherry-pick from a set of complex issues associated with the legal services economy, 
+				ignoring, for example, economic rents, information asymmetries, government-conferred monopolies, non-transitive preferences,
+				utility functions that incorporate the public welfare, endogenous preference-formation, and other distortions in the economic 
+				menagerie. Letting that slide while impeaching a <b>private-sector</b> practice that might increase the aggregate supply
+				of services results in pabulum, not analysis.</li></div>
+
+			</div>
+
+		<div class = "pagehead pss" id = "pmore" hidden>
+				<h1>Additional Resources</h1>
+				<ul>
+				<li><b>Poverty</b>. There is no substitute for engaging the issues involved in poverty measurement. Check out:
+					<ul>
+						<li><span class = "smc">Measuring Poverty: A New Approach</span> (Constance F. Citro & Robert T. Michael eds., 1995), <i>available at</i> <a href = "http://www.nap.edu/openbook.php?record_id=4759">http://www.nap.edu/openbook.php?record_id=4759</a>. (Last accessed June 9, 2015.)</li>
+						
+						<li>Anupama Jacob, <i>The Supplemental Poverty Measure</i>, 1 <span class = "smc">Pol. Brief</span>, (Ctr. Poverty Research, Berkeley, C.A.), 2010, <i>available at</i> <a href = "http://poverty.ucdavis.edu/policy-brief/supplemental-poverty-measure-better-measure-poverty-america">http://poverty.ucdavis.edu/policy-brief/supplemental-poverty-measure-better-measure-poverty-america</a>. (Last visited June 9, 2015.)</li>
+						
+						<li><span class = "smc">U.S. Census Bureau, How the Census Bureau Measures Poverty, ,</span> <a href = "http://www.census.gov/hhes/www/poverty/about/overview/measure.html">http://www.census.gov/hhes/www/poverty/about/overview/measure.html</a> (last visited June 11, 2015).</li>
+						
+						<li><span class = "smc">U.S. Dep't Health & Human Services, Frequently Asked Questions Related to the Poverty Guidelines and Poverty</span>, <a href = "http://aspe.hhs.gov/Poverty/faq.cfm">http://aspe.hhs.gov/Poverty/faq.cfm</a> (last visited June 6, 2015).</li>
+						
+						<li>Thesia I. Garner, Supplemental Poverty Measure Thresholds (Dec. 29, 2010) (paper prepared for Allied Social Science Ass'n Annual Meeting, Denver, CO), <i>available at</i> <a href = "http://stats.bls.gov/pir/spm/spm_pap_thres_foundations10.pdf">http://stats.bls.gov/pir/spm/spm_pap_thres_foundations10.pdf</a> (last visited June 11, 2015).</li>
+						
+						<li>Jesse Bricker et al., <i>Changes in U.S. Family Finances from 2007 to 2010</i>, 98 <span class = "smc">Fed. Res. Bull.</span> (2012), <i>available at</i> <a href = "http://www.federalreserve.gov/pubs/bulletin/2012/pdf/scf12.pdf">http://www.federalreserve.gov/pubs/bulletin/2012/pdf/scf12.pdf</a>. (Last visited June 11, 2015.)</li>
+						
+						<li>Webinar: Timothy Smeeding & Kathleen Short, An Intelligent Consumer's Guide To Poverty Measurement (Inst. for Research on Poverty 2014), <a href = "http://ics.webcast.uwex.edu/Mediasite6/Play/3466f01381134865a9d567dbbb6b1f1d1d ">http://ics.webcast.uwex.edu/Mediasite6/Play/3466f01381134865a9d567dbbb6b1f1d1d </a> (last visited June 11, 2015).</li>
+						
+						<li>The self-sufficiency standard is a non-efficiently but quite useful measure referenced a lot on this site. Learn about it. <a href = "http://www.selfsufficiencystandard.org/">http://www.selfsufficiencystandard.org/</a>.</li>
+					</ul>
+				</li>
+
+				<li><b>Current Population Survey ("CPS")</b>. Our sliding-scale fee structures are based on 2005-2014 <a href = " http://www.census.gov/cps/">CPS</a> estimates. We're working hard to get our methods and results into a traditional "Working Paper" or published paper format. Meanwhile, check out "Explain," above, and feel free to contact
+				us with questions.</li>
+				<li><b>Access to Justice</b>. Commentary on public-interest and low-bono lawyering and access to justice is plentiful. A search on Google Scholar should do the trick. 
+				<i>Good</i> empirical research is harder to track down. These subjects inspire a fair amount of bad scholarship. Some works worth engaging:
+				<ul>
+					<li><span class = "smc">Private Lawyers and the Public Interest: The Evolving Role of Pro Bono in the Legal Profession</span> (Robert Granfield & Lynn Mather, eds., 2009).</li>
+					
+					<li><span class = "smc">Middle Income Access to Justice</span> (Michael Trebilcock, Anthony Duggan & Lorne Sossin, eds., 2012).</li>
+					
+					<li>Anything by Bert Kritzer leads in the right direction. <i>See</i> <span class = "smc">Herbert M. Kritzer, Lawyers at Work</span> (2015).</li>
+				
+					<li>Gillian K. Hadfield, <i>Higher Demand, Lower Supply? A Comparative Assessment of the Legal Resource Landscape for Ordinary Americans</i>, 37 <span class = "smc">Fordham Urban L. J.</span> 129 (2009), available at <a href = "http://ir.lawnet.fordham.edu/cgi/viewcontent.cgi?article=2325&context=ulj">http://ir.lawnet.fordham.edu/cgi/viewcontent.cgi?article=2325&context=ulj</a>. (Last visited June 11, 2015.)</li>
+					
+					<li>Catherine R. Albiston & Rebecca L. Sandefeur, <i>Expanding the Empirical Study of Access to Justice</i>, 2013 <span class = "smc">Wisc. L. Rev.</span> 101 (2013), <i>available at </i> <a href = "http://www.law.berkeley.edu/php-programs/faculty/facultyPubsPDF.php?facID=4364&pubID=22">http://www.law.berkeley.edu/php-programs/faculty/facultyPubsPDF.php?facID=4364&pubID=22</a>.</li>
+				</ul>
+				</li>
+				<li>We're developing papers and other resources that distill the content and issues on this site.</li>
+				</ul>
+
+		</div>		 
+		 
+		<div class = "pagehead pss" id = "pdetail">
+			<span id = "explainme"></span>
+         </div>	
+
+		<div class = "pagehead pss" id = "pterms" hidden>
+			<h1>Terms of Service</h1>
+			<h3>Last Updated June 6, 2015</h3>
+				<p>The intended purposes of the sliding scale calculator and associated documentation is to permit (a) law offices to offer sliding-scale fees to their	clients, and (b) to provide information that will prompt research and scholarship on legal access-to-justice issues.</p>
+				
+				<p>Please read our Terms of Service ("TOS") <strong>prior to</strong> registering for our programs or using any portion of the our website (the "Site," which
+					consists of all content and pages located within the https://tworiverslaw.net/ssc/ web domain), including accessing any materials, chat rooms, or other
+					electronic services. These TOS are between you and Two Rivers Law LLC. As used in the TOS, "we," "us," and "our" refer to Two Rivers Law
+					LLC.</p>
+				<p><b>
+						By using or continuing to use the Site, you agree to be legally bound by the TOS, whether or not you are a registered user. If you do not
+						understand or do not wish to be bound by the TOS, you should not use the Site. You understand and agree that using the Site in no way creates an
+						attorney-client relationship between you and us. You are not our client and we are not your lawyer. Always seek current, personalized legal advice
+						within the context of a formal attorney-client relationship.
+					</b></p>
+				<p>
+					We reserve the right to modify the TOS at any time without advance notice. Any changes to the TOS will be effective as of the date identified as the
+					effective date. By accessing the Site after any changes have been made, you agree to most current version of the TOS and consent to all changes reflected
+					in them. Be sure to return to this page periodically to ensure familiarity with the most current version of the TOS.
+				</p>
+				<p>
+					By using or continuing to use this Site, <strong>you agree to</strong>:
+				</p>
+				<ul>
+					<li>Use the Site exclusively for its intended purposes;</li>
+					<li>Comply with all applicable local, state, national and international laws, rules and regulations; and</li>
+					<li>Our collection, use, disclosure, and retention of your Personal Information, including but not
+						limited to its transfer between us and any third parties, affiliates, and subsidiaries identified in our Privacy Policy (below), and you acknowledge that
+						such transfer might be to a jurisdiction that provides a different level of privacy protection than that available in your own country.</li>
+				</ul>
+				<p>
+					By using or continuing to use this site, you <strong>agree not to</strong>:
+				</p>
+				<ul>
+					<li>Use the Site for purposes besides its intended purposes;</li>
+					<li>Use the Site in any manner intended to damage, disable, overburden or impair any of our servers or any networks connected to our servers;</li>
+					<li>Interfere with any other party's use and enjoyment of the Site;</li>
+					<li>Without authorization access or attempt to access the Site, other accounts, computer systems or	networks connected to any of our servers through hacking, password mining or any other means;</li>
+					<li>Obtain or attempt to obtain any materials or information stored on the Site, its servers or	associated computers through any means not intentionally made available to you through the Site;</li>
+					<li>Alter or remove from any Site content any ownership identifiers, terms of service, policies, licenses, attributions, or copyright notices;</li>
+					<li>Download in bulk, any Site content, including user lists and user information;</li>
+					<li>Misrepresent or attempt to misrepresent your identity; or</li>
+					<li>Introduce or seek to introduce any of the following content onto or through the Site:
+						<ul>
+							<li>Content that defames, harasses, or threatens others;</li>
+							<li>Content that discusses illegal activities with the intent to commit them;</li>
+							<li>Content that infringes another's intellectual property;</li>
+							<li>Profane, pornographic, obscene, indecent, or unlawful content;</li>
+							<li>Advertising or commercial solicitation;</li>
+							<li>Content related to partisan political activities;</li>
+							<li>Viruses, trojan horses, worms, time bombs, corrupted files, malware, spyware, and any other similar software that may damage the operation of
+								another's computer or property; or</li>
+							<li>Content that intentionally misrepresents facts or misleads others.</li>
+						</ul>
+					</li>
+				</ul>
+
+				<p> 
+				<strong>Your Information.</strong>
+				In order to participate fully in Site activities, we <strong>might</strong> ask you to provide your name, an email address, and a user password to create a
+					user account (a "<strong>User Account</strong>"). You agree to never disclose your User Account information with any third party. You represent that all
+					information provided by you is accurate and current and you agree to update your information to keep it accurate and current. Notwithstanding your
+					obligation under this paragraph, you may provide us with a nickname or user name for use on the site or, if the option is made available, you may post
+					content anonymously.
+				</p>
+				<p>
+					<strong>Laws, Terms, and Conditions.</strong>
+					Unless otherwise indicated, all Site content is protected by United States and foreign copyright laws. Any third-party content provided through the Site or
+					linked to or redirected by the Site, including materials provided by us under a license and third-party vendors such as payment processing vendors, might
+					be subject to those parties&#8217; terms and conditions. By using this Site you agree to read and abide by all such terms and conditions or, if you cannot
+					locate or understand those terms and conditions or do not agree to them, to not access or use the third-party content.
+				</p>
+				<p>
+					<strong>Rights and Permissions. </strong>
+					On one or more occasions you might be invited to submit or distribute content to further its intended purpose, which content might include posts, blogs,
+					opinions, questions, answers, file uploads or links, voice recordings, photographs, video-recorded classroom or other participation footage, video essays
+					or speeches, testimonials, or other visual, audio, or written information from or about you or yourself. All such content you submit or provide to or
+					through the Site is your &#8220;<strong>User Content</strong>.&#8221; By submitting or distributing your User Content through or to the Site, you represent
+					and warrant (1) that you have all necessary rights and permissions to reproduce and publish the User Content and to authorize us and our users to
+					reproduce, modify, publish, use, or distribute the User Content in a manner consistent with the license below, and (2) that such action will not infringe
+					or violate the rights of any third party. You agree to be solely responsible for your User Content and the consequences of submitting or distributing it.
+				</p>
+				<p>
+					<strong>Ownership.</strong>
+					By submitting or distributing your User Content to or through the Site, you hereby assign us <strong>all rights and ownership interest</strong> in your
+					User Content, including copyright any moral and publicity rights. We may host, transfer, display, perform, reproduce, modify, distribute, re-distribute,
+					relicense and otherwise use, make available and exploit your User Content, in whole or in part, in any form and in any media formats and through any media
+					channels (available now or developed later). We hereby grant you a limited, non-sub-licensable, royalty-free, perpetual, irrevocable license in your User
+					Content for you to use for your personal purposes; however, we are not obligated to store or make your User Content available to you for any period of time
+					nor make your User Content accessible to you in any particular medium or form. We hereby grant you a limited, non-sub-licensable, revocable license to use
+					any other User&#8217;s Content provided to you in connection with your use of the Site, which license terminates on the earlier of you ceasing to use the
+					Site for its intended purpose or your violation of any term of the TOS.
+				</p>
+				<p>
+					<strong>Other Users.</strong>
+					You acknowledge that using this Site might involve interacting with others, some or all of whom might be unknown to you. You acknowledge that disclosing
+					personal information to others through the site increases risks of identity theft, undesired attention, or harassment and we have no ability to control or
+					moderate those risks. We advise you to not share personal information with others over the site and, if you do so anyway, to always use prudence and
+					caution.
+				</p>
+				<p>
+					<strong>Digital Millennium Copyright Act.</strong>
+					Copyright owners who believe their property has been infringed on the Site should notify us in writing at the address provided on our contact page. To be
+					valid, the notice must:
+				</p>
+				<ul>
+				<li>Include a physical or electronic signature of a person authorized to act on behalf of the owner of
+					an exclusive right that is allegedly infringed;</li>
+				<li>Identify the copyrighted work claimed to have been infringed, or, if multiple copyrighted works at a
+					single online site are covered by a single notification, a representative list of such works at that site;</li>
+				<li>Identify the material that is claimed to be infringing or to be the subject of infringing activity
+					and that is to be removed or access to which is to be disabled, and information reasonably sufficient to permit the service provider to locate the
+					material;</li>
+				<li>Provide information reasonably sufficient to permit the us to contact the complaining party, such as
+					an address, telephone number, and, if available, an electronic mail address at which the complaining party may be contacted;</li>
+				<li>State that the complaining party has a good faith belief that use of the material in the manner
+					complained of is not authorized by the copyright owner, its agent, or the law; and</li>
+				<li>State that the information in the notification is accurate, and under penalty of perjury, that the
+					complaining party is authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.</li>
+				</ul>
+				<p>
+					<strong>NO WARRANTY.</strong>
+					TO THE FULLEST EXTENT PERMITTED BY LAW, THE SITE AND ALL CONTENT AND SERVICES PROVIDED ON OR THROUGH IT ARE PROVIDED "AS IS" AND "AS AVAILABLE" AND ARE
+					PROVIDED TO YOU AT YOUR OWN RISK, WITHOUT WARRANTY OF ANY KIND, INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+					PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT:
+				</p>
+				<ul>
+					<li>THE SITE WILL OPERATE IN AN UNINTERRUPTED OR ERROR-FREE MANNER;</li>
+					<li>THE SITE IS COMPATIBLE WITH YOUR HARDWARE OR SOFTWARE;</li>
+					<li>THE SITE IS FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS;</li>
+					<li>THE SITE IS IMPERVIOUS TO THIRD-PARTY &#8220;HACKING&#8221; EFFORTS, WHICH MIGHT DAMAGE YOUR PROPERTY OR DATA;</li>
+					<li>THE CONTENT PROVIDED WILL MEET YOUR NEEDS OR EXPECTATIONS;</li>
+					<li>THE CONTENT IS ACCURATE, COMPLETE, OR TIMELY; OR THAT</li>
+					<li>THE CONTENT WILL BE CONTINUE TO BE MADE AVAILABLE TO YOU IN THE FUTURE.</li>
+				</ul>
+				<p>
+					<strong>Limitations of Liability.</strong>
+					You acknowledge that when using the Site you might be exposed to User Content from a variety of sources and that:
+				<ul>
+				<li>We are not capable of screening for, establishing, or verifying the accuracy, usefulness,
+					reliability, or intellectual property rights of or relating to such User Content; and</li>
+				<li>User Content might be inaccurate, offensive, defamatory, indecent, or objectionable.</li>
+				</ul>
+				<p>
+					We do not endorse any User Content or any opinion, recommendation, or advice it expresses, nor are we obligated to monitor any User Content or any other
+					user communications through the Site.
+				</p>
+					<p><strong>
+						YOU HEREBY WAIVE ANY LEGAL OR EQUITABLE RIGHTS OR REMEDIES YOU HAVE OR MIGHT HAVE AGAINST US FOR ANY LOSSES OR LIABILITIES THAT ARISE OUT OF OR ARE
+						ALLEGED TO ARISE OUT OF ANY USER CONTENT OR OTHER USER COMMUNICATIONS PROVIDED ON OR THROUGH THE SITE. &#160;
+					</p></strong>
+				<p>
+					The Site may include links to sites or applications maintained or controlled by third parties. We are not responsible for and do not routinely screen,
+					review, or endorse the contents of or use of any of the products or services that may be offered at these sites. If you elect to link to third-party
+					websites or applications, you do so at your own risk.
+				</p>
+					<p><strong>
+						TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, YOU AGREE THAT NEITHER WE NOR OUR OWNERS, OFFICERS, DIRECTORS, EMPLOYEES, OR AGENTS WILL BE LIABLE
+						TO YOU FOR ANY LOSSES OR LIABILITIES, EITHER ACTUAL OR CONSEQUENTIAL, ARISING OUT OF OR RELATING TO THESE TERMS OF SERVICE, OR YOUR (OR ANY THIRD
+						PARTY'S) USE OF OR INABILITY TO USE THE SITE, OR YOUR PLACEMENT OF CONTENT ON THE SITE, OR YOUR RELIANCE UPON INFORMATION OBTAINED FROM OR THROUGH THE
+						SITE, WHETHER YOUR CLAIM IS BASED IN CONTRACT, TORT, STATUTE, OR OTHER LAW OR REGULATION.TO THE FULLEST EXTENT PERMITTED BY LAW, WE WILL NOT BE LIABLE
+						FOR ANY CONSEQUENTIAL, INDIRECT, PUNITIVE, SPECIAL, EXEMPLARY, OR INCIDENTAL DAMAGES, WHETHER FORESEEABLE OR UNFORESEEABLE AND WHETHER OR NOT WE HAVE
+						BEEN NEGLIGENT OR OTHERWISE AT FAULT.
+					</p></strong>
+				<p>
+					<strong>Indemnity.</strong>
+					You agree to indemnify us and our subsidiaries, owners, directors, affiliates, officers, agents, and employees from and against any losses or liabilities
+					incurred in any proceeding arising out of your use of or conduct on the Site, which will include all litigation or proceeding costs and reasonable
+					attorneys' fees.
+				</p>
+				<p>
+					<strong>Termination.</strong>
+					You agree that we, in our sole discretion, may terminate your use of the Site or your participation in it, for any reason or no reason, upon notice to
+					you. At any time we, in our sole discretion, may cancel, delay, reschedule, or alter the format of any Site content, and you agree that we will have no
+					liability to you for any consequences of such actions. You may terminate your use of the Site at any time. The provisions of the TOS pertaining to our uses
+					of your Personal Information, your use of the site for its intended purpose, indemnity, warranty, and limitation of liability survive termination.
+				</p>
+				<p>
+					<strong>Entire Agreement.</strong>
+					The Agreement constitutes the entire agreement between you and us with respect to your use of the Site, and supersedes any prior TOS between you and us
+					regarding your use of the Site.
+				</p>
+				<p>
+					<strong>Waiver and Severability.</strong>
+					If we elect not to exercise or enforce any right or provision of the Agreement, such election will not affect the effectiveness of the provision on future
+					occasions or our future rights relating thereto. If any provision of this agreement is held to be unenforceable, then that provision will be modified to
+					the minimum extent necessary to make it enforceable, unless that modification is not permitted by law, in which case that provision will be disregarded.
+					Any unenforceable provision will remain as written in any circumstances other than those in which the provision is held to be unenforceable.
+				</p>
+				<p>
+					<strong>Choice of Law/Forum Selection.</strong>
+					You agree that these TOS and any claim or dispute arising out of or relating to these TOS or any content or service obtained from or through the Site will
+					be governed by the laws of the State of Oregon. You agree that all such claims and disputes will be heard and resolved exclusively in the federal or state
+					courts located in and serving Portland, Oregon. You consent to the personal jurisdiction of those courts over you for this purpose, and you waive and agree
+					not to assert any objection to such proceedings in those courts (including any defense or objection of lack of proper jurisdiction or venue or
+					inconvenience of forum).
+				</p>
+					<h1>
+						PRIVACY POLICIES AND PROCEDURES
+					</h1>
+					<h2>
+						Policies
+					</h2>
+				<p>
+					"Personal Information" means any information about yourself that you may provide to us when using the Site, such as when you sign up for a user account or
+					enter into a transaction through the Site, which might include (but is not limited to) your name, contact information, gender, age date of birth,
+					occupation, and photo identification.
+				</p>
+				<p>
+					We care about the confidentiality and security of your Personal Information. Our policy is to use commercially reasonable efforts to keep your Personal
+					Information secure. This Privacy Policy and Procedures (&#8220;<strong>Privacy Policy</strong>&#8221;) applies only to information that we collect through
+					the Site. It does not apply to information that we may collect from you in other ways (for example, this policy does not apply to information that you may
+					provide to us over the phone, by fax, or through conventional mail).
+				</p>
+				<p>
+					Our policy is to limit the collection of Personal Information to what we need with respect to specific Site activities in order to satisfy the Site&#8217;s
+					intended purpose and all associated business tasks and legal, or regulatory requirements.
+				</p>
+					<h2>
+						What We Collect
+					</h2>
+				<p>
+					We collect information, including Personal Information, when you sign up for a user account, participate in online activities, register for a certificate,
+					or email us. We collect User Content when you distribute it to or through the Site.
+				</p>
+				<p>
+					We also collect usage information and &#8220;web analytics&#8221; that can help us track how users interface with the Site so that we may improve our
+					content and delivery. We might log the IP address, operating system, and browser software used by each user of the Site, and we may be able to determine
+					from an IP address a user's Internet Service Provider and the geographic location of his or her point of connectivity. Some of the information is collected
+					through cookies (small text files placed on your computer that store information about you, which can be accessed by the Site). You might be able to
+					control how and whether cookies will be accepted by your web browser. If you reject our cookies, certain functions and conveniences of this Site may not
+					work properly.
+				</p>
+					<h2>
+						Uses
+					</h2>
+				<p>
+					We may use your information, including your Personal Information:
+				</p>
+				<ul>
+				<li>To enable us to provide, administer, and improve the content;</li>
+				<li>For research purposes;</li>
+				<li>To respond to your inquiries or requests;</li>
+				<li>To monitor and detect violations the TOS;</li>
+					<li>
+						<strong>Solely at your affirmative request</strong>
+						to send you updates about our content or other events, to send you communications about our products or services or those of selected business partners
+						that may be of interest to you, or to send you email messages about Site maintenance or updates.
+					</li>
+				<li>To authenticate your identity, if needed for a product or service;</li>
+				<li>For purposes described elsewhere in this Privacy Policy;</li>
+				<li>To comply with legal or administrative orders, requests, or requirements;</li>
+				<li>To process refunds, as applicable; or</li>
+				<li>As otherwise described to you at the point of collection or pursuant to your consent.</li>
+				</ul>
+				<p>
+					We may archive your information for future communications with you.
+				</p>
+				<h2>
+					Disclosure to Third Parties
+				</h2>
+				<p>
+					We may share your information, <strong>including your Personal Information</strong>:
+				</p>
+				<ul>
+				<li>With third-party service providers or contractors that perform certain functions on our behalf
+					consistent with the Site&#8217;s intended purpose (for example, passing your information to a third-party vendor so you can pay online, hosting
+					video-recorded footage on a third-party video-hosting site like YouTube);</li>
+				<li>For scientific research purposes;</li>
+				<li>To respond to subpoenas, court orders, or other legal process; to investigate, or prevent, or take
+					action regarding illegal activities, suspected fraud, or security or technical issues, or to enforce the TOS;</li>
+				<li>As otherwise may be required by applicable law;</li>
+				<li>To protect our rights, property, or safety or those of others;</li>
+				<li>With our business associates or with successors in the event of a merger, acquisition or
+					reorganization, for their use consistent with this Privacy Policy;</li>
+				<li>As otherwise described to you at the point of collection or pursuant to your consent.</li>
+				</ul>
+				<p>
+					In cases where we share or disclose your Personal Information to third parties:
+				</p>
+				<ul>
+				<li>the third party recipients are required to handle the Personal Information in a confidential manner and to maintain adequate security
+					to protect the information from loss, misuse, unauthorized access or disclosure, alteration, and destruction; and</li>
+				<li>we will only disclose and share the Personal Information that is required by the third party to fulfill the purpose stated at the time of
+					collection.</li>
+				</ul>
+				<p>
+					We may publish your information but <strong>not</strong> your Personal Information:
+				</p>
+				<ul>
+					<li>To provide opportunities for you to communicate with users with potentially similar interests or
+					goals. For instance, we may recommend specific study partners or connect participants with similar businesses or nonprofits. In such cases, we may use all
+					information collected about you to determine who might be interested in communicating with you, but we will only provide other users your username, and not
+					disclose your real name or e-mail address to your contact.</li>
+				<li>In the form of datasets, research reports, marketing reports, and client summaries.</li>
+				</ul>
+				</p>
+				<p>
+					When providing any summaries of user data in the form of datasets or other sources of aggregated information, we will endeavor to not include information
+					that would make you likely to be identifiable. For example, if you were the only 70-year-old female with a particular ethnic or racial identity in a state,
+					we would use code and aggregate the data so as to make such detail unavailable.
+				</p>
+				<h2>
+						Concerns
+					</h2>
+				<p>
+					If you have privacy concerns, have disclosed data you would prefer to keep private, or would like to access the information we maintain about you, please
+					contact us.
+				</p>
+				<h2>
+					Effective Date:  June 6, 2015
+				</h2>			
+         </div>	
+		
+		
+        <!-- Service Panels -->
+        <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+
+		
+        <!-- Service Tabs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">What We Do</h2>
+            </div>
+            <div class="col-lg-12">
+
+                <ul id="myTab" class="nav nav-tabs nav-justified">
+                    <li class="active"><a href="#service-one" data-toggle="tab">Business Law</a>
+                    </li>
+                    <li class=""><a href="#service-two" data-toggle="tab">Nonprofit Law</a>
+                    </li>
+                    <li class=""><a href="#service-three" data-toggle="tab">Sharing Law</a>
+                    </li>
+                </ul>
+
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade active in" id="service-one">
+                        <h4>Business Law</h4>
+                        <p>New businesses face daunting legal questions. How should the business be organized? How can it mitigate liability risks? How does taxation work? What registrations and licenses are needed? What contracts, leases, and disclosures are appropriate? Two Rivers Law is ready to help you launch your operation, from the cutting edge business to the family firm to the low-key, part-time consulting gig. We tailor our services to your budget and willingness to tackle tasks on your own, so you pay for only the assistance that you need and want.</p>
+                        
+                        <h5>Business Law</h5>
+                        <p>Expanding a business can be challenging. Two Rivers Law can help you plan your business strategy and transactions in light of tax, intellectual property, and regulatory considerations. Whether you are hiring your first employee, bringing in new business partners, or expanding over state lines, we can help.</p>
+                        
+                        <h5>Mission-Driven Enterprise</h5>
+                        <p>We love assisting businesses that strive to meet multiple bottom lines, such as cooperatives and other mission-driven business forms. While the possibilities for socially responsive business are exciting, the regulatory environment (including taxation, employment, financing) has not caught up. And because some laws are so new, there can be uncertainty about what they mean. Two Rivers Law can steer you through the regulations to create a stable, forward-looking, mission-driven business.</p>
+                    </div>
+
+                    <div class="tab-pane fade" id="service-two">
+                        <h4>Nonprofit Law</h4>
+                        <p>We absolutely love working with nonprofits, from scrappy start-ups to established, multi-faceted service organizations. We have experience with diverse nonprofits, including scientific, artistic, and educational organizations as well as those directly serving the poor or disadvantaged. Whether you need help with a fiscal sponsorship, spinning off from another nonprofit, drafting a business document, Board training, starting a new program, closing a deal, or filing a 501(c) application, we can help.</p>
+
+                        <h5>Shoestring Budgets</h5>
+                        <p>WeRunning a nonprofit can be hard work. Funds are often tight and it can be difficult to figure out where limited resources should be directed. From flat-fee billing to sliding-scale hourly rates, our financial arrangements will not break your budget. We do not oversell you on legal services. If something is straightforward for you to do, we can show you how. Often we find that a 30- or 60-minute one-on-one educational overview of a particular area of law is all that is needed. There are excellent firms that help nonprofits, and some offer reduced rates to charitable nonprofits. If your matter can be handled faster or at lower cost by another firm, we will make appropriate referrals.</p>
+
+                        <h5>The New 1023-EZ</h5>
+                        <p>In September the IRS announced a new streamlined 501(c)(3) application procedure for many small nonprofits. For example, nonprofits that expect to bring in less than $50,000 a year often qualify for this easier application. The simpler application is a wonderful development. Rather than hiring specialists to help them with the cumbersome, ordinary application, many small organizations can take on the task themselves.</p>
+                    </div>
+
+                    <div class="tab-pane fade" id="service-three">
+                        <h4>Sharing Law</h4>
+                        <h5>What Is the Sharing Economy?</h5>
+                        <p>The term "Sharing Economy" means different things to different people. For some it means using technology ("apps") to crowdsource short-term rental arrangements. For example, many people think of using their smart phones to rent a room in someone's house, rent a car, or even "rent" a passenger seat in a car. The idea is to reduce the need to buy stuff—and so reduce overconsumption—by "sharing" stuff that people already own.</p>
+
+                        <h5>Getting Legal Help</h5>
+                        <p>Successful sharing arrangements need good planning. They can baffle regulators and fall into gray areas of the law. While running afoul of applicable rules can be disastrous, community-spirited programs also stumble over unanticipated sources of conflict—even among well-meaning and good-natured people. Two Rivers Law can help you engineer sound and peaceful solutions. Our flexible and sliding-scale billing options can put your sharing solution on a firm footing without killing your budget.</p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Service List -->
+        <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Service List</h2>
+            </div>
+            <div class="col-md-4">
+                <div class="media">
+                    <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-tree fa-stack-1x fa-inverse"></i>
+                        </span> 
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Service One</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit harum.</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-car fa-stack-1x fa-inverse"></i>
+                        </span> 
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Service Two</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit harum.</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-support fa-stack-1x fa-inverse"></i>
+                        </span> 
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Service Three</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit harum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="media">
+                    <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-database fa-stack-1x fa-inverse"></i>
+                        </span> 
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Service Four</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit harum.</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-bomb fa-stack-1x fa-inverse"></i>
+                        </span> 
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Service Five</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit harum.</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-bank fa-stack-1x fa-inverse"></i>
+                        </span> 
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Service Six</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit harum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="media">
+                    <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-paper-plane fa-stack-1x fa-inverse"></i>
+                        </span> 
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Service Seven</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit harum.</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-space-shuttle fa-stack-1x fa-inverse"></i>
+                        </span> 
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Service Eight</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit harum.</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="pull-left">
+                        <span class="fa-stack fa-2x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-recycle fa-stack-1x fa-inverse"></i>
+                        </span> 
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">Service Nine</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo itaque ipsum sit harum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	
+	<!-- Jim'z Goodies -->
+	<script src = "https://code.jquery.com/jquery-latest.min.js" type = "text/javascript"></script>
+      <script src = "jcanvas.js"></script>
+      <script src = "mainssc.js"></script>
+      <script src = "jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+      <script src = "distdata.js"></script>
+      <script src = "plotfees.js"></script>
+      <script src = "plotdist.js"></script>
+      <script src = "plotbeta.js"></script>
+      <script src = "equations.js"></script>
+      <script src = "distdata.js"></script>
+      <script src = "spdata.js"></script>
+      <script src = "statelist.js"></script>
+      <script src = "drawutilities.js"></script>
+      <script src = "distributions.js"></script>
+      <script src = "math.js"></script>
+      <script src = "numeral.min.js"></script>
+      <script src = "plotrev.js"></script>
+      <script src = "graphobjects.js"></script>
+      <script src = "jquery.range-min.js"></script>
+      <script src = "jquery.autofit.js"></script>
+      <script src = "jquery.limitslider.js"></script>
+      <script src = "print.js"></script>
+	  <script src = "povcalc.js"></script>
+      <script src = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type = "text/javascript"></script>
+      <link href = "newcss.css" rel = "stylesheet" type = "text/css">
+      <link href = "menucss.css" rel = "stylesheet" type = "text/css">
+      <script src = "cssscript.js"></script>
+      <link href = "jquery-ui-1.11.4.custom/jquery-ui.min.css" rel = "stylesheet">
+
+</body>
+
+</html>
